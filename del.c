@@ -7,7 +7,7 @@ struct node {
 };
 
 
-
+void del_first(){
 
 struct node *del_first(struct node*head)
 {
@@ -20,7 +20,9 @@ struct node *del_first(struct node*head)
 		temp=NULL;
 	}
 }
+}
 
+void del_last(){
 struct node *del_last(struct node *head)
 {
 	if(head==NULL) printf("List is empty");
@@ -42,7 +44,7 @@ struct node *del_last(struct node *head)
 		temp=NULL;
 	}
 }
-
+}
 
 
 void del_pos(struct node **head,int position)
@@ -68,7 +70,7 @@ void del_pos(struct node **head,int position)
 	}
 }
 
-
+void add_beg(){
 
 struct node *add_beg(struct node *head,int d)
 {
@@ -77,6 +79,7 @@ struct node *add_beg(struct node *head,int d)
 	ptr->link=NULL;
 	ptr->link=head;
 	head=ptr;
+}
 }
 
 void add_at_last(struct node *head,int data)
@@ -97,8 +100,8 @@ void add_at_pos(head,data,position){
 	struct node *ptr=head;
 	struct node *ptr2=(struct node*)malloc(sizeof(struct node));
 	ptr2->data=data;
-	ode add_beg()
 		ptr=ptr->link;
+
 		pos--;
 	}
 	ptr2->link=ptr->link;
@@ -120,17 +123,17 @@ int main(){
 				scanf("%d",&data);
 				add_beg(head);
 				
-case 2 : 
+case 2 : add_at_pos(){
        int pos ;
        printf("Enter data,position");
        scanf("%d %d",&data,&pos);
        add_at_pos();
+	 }
       
-case 3 :
-       add_at_last();
-case 4 : 
-case 5:
-case 6 :
+case 3 :add_at_last();
+case 4 :del_first(); 
+case 5:del_pos();
+case 6 :del_last();
 case 7:exit(0);
 default : printf("Invalid choice");
 
