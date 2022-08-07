@@ -1,0 +1,55 @@
+#include<stdio.h>
+#include<stdlib.h>
+#include<pthread.h>
+
+pthread_mutex_t lock;
+inti=1;
+
+void *even()
+{
+if(i%2==0)
+{
+pthread_muyrx_lock(&lock);
+printf("%d",i);
+i++;
+}
+else
+pthread_mutex_unlock(&lock);
+}
+}
+
+void *odd()
+{
+if(i%2!=0)
+{
+pthread_mutex_lock(&lock);
+printf("%d",i);
+i++;
+}
+else
+pthread_mutex_unlock(&lock);
+}
+}
+
+
+
+
+int main()
+{
+pthread_t t1[2];
+pthread_mutex_init(&lock,NULL);
+int n;
+printf("Enter Limit ");
+scanf("%d",&n);
+
+for(int j=1;j<n;j++)
+{
+pthread_create(&t1[0],NULL,&even,NULL);
+pthread_create(&t1[1],NULL,&odd,NULL);
+}
+pthread_join(t1[0],NULL);
+pthread_join(t1[1],NULL);
+
+pthread_mutex_destroy(&lock);
+
+}
