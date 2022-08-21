@@ -1,0 +1,13 @@
+1)what are signed and unsigned datatypes?
+Ans:signed datatypes indicate that it can hold both positive and negative values,where as a unsigned datatypes indicate
+that it can hold both positive and negative values.
+
+2)Datatypes by default are signed or unsigned?
+Ans: Int by default holds signed values because integer has both positive and negative values.
+	char can hold either signed or unsigned mostly depends on compiler.(Negative char does not exist) 
+Note: If the datatype holds unsigned value its range does not changes but shifts towards positive.
+
+3)const int* same as int const* --> pointer can point to a constant int and value of int pointed by this pointer cannot be changed.
+4)const int* const --> pointer can point to a constant int and value of int pointed by this pointer cannot be changed,
+		as we cannot change the value of pointer as well it is now constant and it cannot point to another constant int.
+
