@@ -1,23 +1,20 @@
-//WAP to copy string using pointers
 #include<stdio.h>
-#include<string.h>
+#include<stdlib.h>
 
-int main()
+int str_copy(char s1[25],char s2[25])
 {
-    int i;
-    char str[] = "Program to copy string";
-    char b[sizeof str];
-    char *p,*q;
-    p = str;
-    q = b;
-    int length;
-    length = sizeof str;
-    for(i=0;i<length;i++)
-    {
-        *q=*p;
-        p++;
-        q++;
-    }
-    printf("%s\n",b);
-    printf("The length of new sring is %d\n",sizeof b);
+	int i;
+	for(i=0;i<25;i++)
+	{
+		s2[i]=s1[i];
+	}
+for(i=0;i<25;i++)
+	printf(" %c",s2[i]);
 }
+
+int main(){
+char s1[25] = "comparing strings",s2[25];
+result = str_copy(s1,s2);
+//printf("The comarison is %s",result);
+}
+
