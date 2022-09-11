@@ -1,0 +1,39 @@
+
+
+ #include <stdio.h>
+    
+    
+    void main ()
+    {
+ 
+        int number[30],i, j;
+ 
+        int  temp, size;
+        
+        
+        
+        printf("Enter the number of size of an array\n");                        //storing the size of an array
+        scanf("%d", &size);
+ 
+        
+        printf("Enter the numbers \n");
+        for (i = 0; i < size; ++i)
+	        scanf("%d", &number[i]);                                            //fetching th elements from the user
+ 
+        /*  sorting begins ... */
+ 
+        for (i = 0; i < size; ++i) 
+        {
+            for (j = i + 1; j < size; ++j) 
+            {
+                if (number[i] < number[j])                                     //check if first element is less than second element
+                {
+                    temp = number[i];
+                    number[i] = number[j];                                    //sort in descending order
+                    number[j] = temp;
+                }
+            }
+        }
+      
+      printf("the second largest element in the array is %d",number[1]);                   //what ever is the second element thats the second largest
+      }
