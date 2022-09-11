@@ -1,0 +1,49 @@
+
+//deletion of an element in an  array
+#include<stdio.h>
+
+int main()
+{
+ int size,i,j,pos;
+ 
+  printf("enter the size of the array\n");
+  scanf("%d",&size);
+  int arr[size];
+  
+  printf("enter the elements for array1 :");
+  
+  for(i=0;i<size;i++) 
+  scanf("%d",&arr[i]);
+  
+  
+   printf("enter the positon of the element to be deleted\n");
+   scanf("%d",&pos);
+
+    if (pos >= size+1)                //check if the deletion is possible by checking if the position lies in the array
+    {  
+        printf (" \n Deletion is not possible in the array.");  
+    }  
+    else  
+    {  
+                                      // use for loop to delete the element and update the index  
+        for (i = pos - 1; i < size -1; i++)  
+        {  
+            arr[i] = arr[i+1]; // assign arr[i+1] to arr[i]                     //update the next elements with the element to be element
+        }  
+        
+  printf("\n");
+  
+  for(i=0;i<size-1;i++)
+  printf("%d ",arr[i]);                                  //printing the updated array
+  
+  
+  }
+  }
+  
+  OUTPUT:
+
+
+enter the size of the array 5
+enter the elements for array1 :12 12 12 321 12
+enter the positon of the element to be deleted 4
+the updated array is :12 12 12 12
