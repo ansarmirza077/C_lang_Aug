@@ -1,0 +1,31 @@
+
+
+#include <stdio.h>
+    void main ()
+    {
+ 
+        int number[30],i, j;
+ 
+        int count=0, size;
+        printf("Enter the number of size of an array\n");
+        scanf("%d", &size);
+ 
+        printf("Enter the numbers \n");
+        for (i = 0; i < size; ++i)
+	        scanf("%d", &number[i]);
+ 
+        for (i = 0; i < size; ++i) 
+        {
+           if(number[i]<0) count++;                             //if element is less than 0 then count it as negative
+         
+        }
+      
+      printf("the number of negative elements in this array is %d",count);
+      }
+      
+ OUTPUT:
+
+Enter the number of size of an array 5
+Enter the numbers 
+12 -12 123 123 -12
+the number of negative elements in this array is 2
