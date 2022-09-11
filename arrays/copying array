@@ -1,0 +1,32 @@
+
+
+#include<stdio.h>
+
+int main()
+{
+  int size,i,j;
+  
+  printf("enter the size of the array\n");
+  scanf("%d",&size);
+  
+  int array1[size],array2[size];
+  
+  printf("enter the elements for array1 :");
+  for(i=0;i<size;i++) 
+  scanf("%d",&array1[i]);
+
+   for(i=0;i<size;i++)
+   array2[i]=array1[i];
+ 
+  printf("\n");
+  
+  printf("array elements of second array:");
+  for(i=0;i<size;i++) printf("%d ",array2[i]);
+  
+  }
+  
+  OUTPUT:
+enter the size of the array 5
+enter the elements for array1 :12 12 312 123 312
+
+array elements of second array:12 12 312 123 312 
