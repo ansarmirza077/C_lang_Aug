@@ -8,8 +8,8 @@ int main()
     scanf("%d",&a);
     if(a&1)
     {
-    printf("The LSB is %d",a&1);
+    printf("The LSB is set-%d",a&1);
     }
-    else printf("LSB is %d",a&1);
+    else printf("LSB is unset-%d",a&1);
 }
 
